@@ -36,7 +36,7 @@ app.use(
   })
 );
 
-// app.use(requestIp.mw());
+app.use(requestIp.mw());
 
 // app.use(express.static('public'));
 app.use(express.json());

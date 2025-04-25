@@ -15,9 +15,9 @@ const attLimiter = rateLimit({
   message: limitMsg,
   standardHeaders: true, //Return rate limit info in the RateLimit - * headers
   legacyHeaders: false, // Disable the `X-RateLimit-*` headers
-  // keyGenerator: (req, res) => {
-  //   return req.clientIp // IP address from requestIp.mw(), as opposed to req.ip
-  // }
+  keyGenerator: (req, res) => {
+    return req.clientIp // IP address from requestIp.mw(), as opposed to req.ip
+  }
 });
 
 
